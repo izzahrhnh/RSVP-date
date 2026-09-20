@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An RSVP invitation for a cosy gathering." />
+    <title>Petals & Plates — RSVP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-grain" aria-hidden="true"></div>
+        <div class="hero-copy-wrap">
+          <p class="eyebrow">a little gathering</p>
+          <h1 id="page-title">RSVP</h1>
+          <p class="reply-by">kindly reply by<br /><strong>10 · 10 · 26</strong></p>
+        </div>
+        <img class="hero-photo" src="assets/mariah-hewines-bouquet-cutout.png" alt="A bouquet of purple, pink, and green flowers" />
+        <p class="swipe-note">scroll down<br /><span>to reply</span><b>⌄</b></p>
+      </section>
+
+      <section class="invitation" aria-labelledby="details-title">
+        <div class="section-heading">
+          <p class="eyebrow">the little details</p>
+          <h2 id="details-title">A slow meal, together</h2>
+        </div>
+        <div class="details-grid">
+          <article>
+            <span class="detail-icon">⌁</span>
+            <p class="detail-label">When</p>
+            <p class="detail-value">Saturday, 24 October<br /><span>Dinner · 9:00 pm</span></p>
+          </article>
+          <article>
+            <span class="detail-icon">⌂</span>
+            <p class="detail-label">Where</p>
+            <p class="detail-value">To be decided<br /><span>somewhere lovely &amp; easy</span></p>
+          </article>
+          <article>
+            <span class="detail-icon">✽</span>
+            <p class="detail-label">Dress note</p>
+            <p class="detail-value">Soft florals / earth tones<br /><span>or simply come as you are</span></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="rsvp-section" aria-labelledby="rsvp-title">
+        <div class="section-heading centered">
+          <p class="eyebrow">your seat at the table</p>
+          <h2 id="rsvp-title">Help us choose the perfect plan</h2>
+          <p class="intro">Nothing set in stone yet — tell us what would make this feel good for you.</p>
+        </div>
+
+        <form id="rsvp-form">
+          <div class="form-block identity-block">
+            <label for="name">Your name <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" placeholder="What should we call you?" required />
+          </div>
+
+          <fieldset class="form-block">
+            <legend>Will you be joining us? <span aria-hidden="true">*</span></legend>
+            <div class="choice-row two-up">
+              <label class="choice-card"><input type="radio" name="attendance" value="Absolutely" required /><span>Yes, save me a seat <b>♡</b></span></label>
+              <label class="choice-card"><input type="radio" name="attendance" value="Not this time" /><span>I’ll miss this one <b>↗</b></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-block">
+            <legend>Which date works best?</legend>
+            <p class="field-hint">Choose every day you could make — more choices means more chance of a yes.</p>
+            <div class="choice-list">
+              <label class="choice-card"><input type="checkbox" name="dates" value="Saturday, 18 October — brunch" /><span><b>Sat, 18 Oct</b><small>Brunch · 12:30 pm</small></span><i>○</i></label>
+              <label class="choice-card"><input type="checkbox" name="dates" value="Sunday, 19 October — lunch" /><span><b>Sun, 19 Oct</b><small>Lunch · 1:00 pm</small></span><i>○</i></label>
+              <label class="choice-card"><input type="checkbox" name="dates" value="Saturday, 25 October — dinner" /><span><b>Sat, 25 Oct</b><small>Dinner · 7:00 pm</small></span><i>○</i></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-block">
+            <legend>Where would you love to eat?</legend>
+            <div class="choice-list">
+              <label class="choice-card"><input type="radio" name="venue" value="Shah Alam area" /><span><b>The Wildflower Café</b><small>Garden café · light, cosy &amp; chatty</small></span><i>○</i></label>
+              <label class="choice-card"><input type="radio" name="venue" value="Kuala Lumpur area" /><span><b>The Glasshouse</b><small>Modern Asian · bright &amp; shareable</small></span><i>○</i></label>
+              <label class="choice-card"><input type="radio" name="venue" value="Putrajaya area" /><span><b>Sora Table</b><small>Japanese plates · calm &amp; intimate</small></span><i>○</i></label>
+            </div>
+          </fieldset>
+
+          <div class="form-block split-fields">
+            <div>
+              <label for="favourites">Food you’re hoping for</label>
+              <textarea id="favourites" name="favourites" rows="3" placeholder="Anything you’ve been craving?"></textarea>
+            </div>
+            <div>
+              <label for="avoid">Food to avoid</label>
+              <textarea id="avoid" name="avoid" rows="3" placeholder="Allergies, dislikes, dietary needs…"></textarea>
+            </div>
+          </div>
+
+          <fieldset class="form-block">
+            <legend>One more thing for the host</legend>
+            <div class="mini-options">
+              <label><span>Comfortable spend</span><select name="budget"><option value="">Choose one</option><option>Under RM40</option><option>RM40–70</option><option>RM70–100</option><option>Happy to splurge</option></select></label>
+              <label><span>Getting there</span><select name="travel"><option value="">Choose one</option><option>Driving</option><option>Public transport</option><option>Need a lift</option><option>Not sure yet</option></select></label>
+            </div>
+            <label class="notes-label" for="notes">Anything else we should know?</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Accessibility needs, timing notes, a birthday wish, or just say hi…"></textarea>
+          </fieldset>
+
+          <button class="submit" type="submit">Send my little note <span>→</span></button>
+          <p class="privacy-note">Your answers are only for the host to plan the nicest table.</p>
+          <p id="confirmation" class="confirmation" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <footer>
+        <span>made with anticipation</span><span class="footer-flower">✽</span><span>see you around the table</span>
+      </footer>
+    </main>
+    <dialog class="welcome-modal" id="welcome-modal" aria-labelledby="welcome-title">
+      <div class="modal-flower" aria-hidden="true">✿</div>
+      <p class="eyebrow">a little note for you</p>
+      <h2 id="welcome-title">You’re invited</h2>
+      <p>For a gathering filled with good food, easy conversation, and our favourite people. Let’s hope to meet soon.</p>
+      <button id="welcome-close" type="button">Open the invitation <span>→</span></button>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
