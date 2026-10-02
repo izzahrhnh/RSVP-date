@@ -1,105 +1,96 @@
+/* ==========================================================
+   BURGUNDY × OLIVE EDITORIAL THEME
+   FULL STYLESHEET
+========================================================== */
 
-  .photo-two,
-  .photo-four {
-    justify-self: end;
-  }
+:root {
+  /* BURGUNDY */
+  --burgundy-deep: #350711;
+  --burgundy: #560f20;
+  --burgundy-rich: #71192d;
+  --wine: #861f38;
+  --berry: #9b3148;
 
-  .pressed-flower {
-    top: 48%;
+  /* GREEN */
+  --forest-deep: #111a13;
+  --forest: #19261b;
+  --forest-soft: #253127;
 
-    left: 44%;
-  }
+  --olive-deep: #30361f;
+  --olive: #4e5832;
+  --olive-light: #707850;
 
-  .missing-photo {
-    padding: 110px 20px 120px;
-  }
+  /* LIGHT */
+  --ivory: #f2eadf;
+  --ivory-soft: #e7dccd;
+  --warm-white: #f8f3eb;
 
-  .missing-bouquet-left {
-    width: 300px;
-  }
+  /* ACCENTS */
+  --rose: #b95063;
+  --rose-soft: #ce7c87;
 
-  .missing-bouquet-right {
-    width: 280px;
-  }
+  /* TEXT */
+  --ink: #302524;
+  --muted-dark: #796864;
+  --muted-light: #bba6a1;
 
-  .dinner-details {
-    padding: 105px 24px 95px;
-  }
+  /* LINES */
+  --light-line: rgba(242, 234, 223, 0.17);
+  --dark-line: rgba(76, 55, 48, 0.17);
 
-  .details-grid {
-    grid-template-columns: 1fr;
-
-    max-width: 390px;
-  }
-
-  .details-grid article {
-    min-height: 170px;
-
-    border-left: 0;
-
-    border-top:
-      1px solid var(--light-line);
-  }
-
-  .details-grid article:first-child {
-    border-top: 0;
-  }
-
-  .details-flower-left {
-    width: 330px;
-  }
-
-  .details-flower-right {
-    width: 300px;
-  }
-
-  .rsvp-section {
-    padding: 110px 22px 100px;
-  }
-
-  .choice-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ending {
-    min-height: 460px;
-  }
-
-  .ending-bouquet {
-    width: 520px;
-  }
-
-  .welcome-modal {
-    padding: 42px 25px 35px;
-  }
-
-  .welcome-modal h2 {
-    font-size: 44px;
-  }
-
+  /* SHADOW */
+  --shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
 }
 
 
 /* ==========================================================
-   SMALL PHONES
+   RESET
 ========================================================== */
 
-@media (max-width: 650px) and (min-height: 800px) {
-
-  .hero {
-    min-height: 100dvh;
-    padding-top: max(105px, calc(env(safe-area-inset-top) + 68px));
-    padding-bottom: max(80px, calc(env(safe-area-inset-bottom) + 48px));
-  }
-
-  .hero-bouquet {
-    height: 50vh;
-    min-height: 430px;
-    max-height: 560px;
-  }
-
-  .hero-copy {
-    margin-top: 2vh;
-  }
-
+* {
+  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--forest-deep);
+
+  color: var(--ink);
+
+  font-family:
+    Manrope,
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+main {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3 {
+  font-family:
+    Fraunces,
+    Georgia,
+    serif;
+
+  font-weight: 500;
