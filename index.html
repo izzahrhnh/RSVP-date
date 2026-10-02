@@ -1,148 +1,629 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="An RSVP invitation for a cosy gathering." />
-    <title>Petals & Plates — RSVP</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main>
-      <section class="hero" aria-labelledby="page-title">
-        <div class="hero-grain" aria-hidden="true"></div>
-        <div class="hero-copy-wrap">
-          <p class="eyebrow">a little gathering</p>
-          <h1 id="page-title">RSVP</h1>
-          <p class="reply-by">kindly reply by<br /><strong>10 · 10 · 26</strong></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A little dinner invitation for a few favourite people." />
+
+  <title>One Table, All of Us — RSVP</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<main>
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section class="hero" aria-labelledby="page-title">
+
+    <div class="hero-grain" aria-hidden="true"></div>
+
+    <div class="hero-copy-wrap">
+      <p class="eyebrow">one evening, one table</p>
+
+      <h1 id="page-title">DINNER</h1>
+
+      <p class="hero-date">24 · 10 · 26</p>
+    </div>
+
+    <img
+      class="hero-photo"
+      src="assets/mariah-hewines-bouquet-cutout.png"
+      alt="A bouquet of purple, pink, and green flowers"
+    />
+
+    <p class="swipe-note">
+      there's a little more
+      <br />
+      <span>keep scrolling</span>
+      <b>⌄</b>
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       STORY INTRO
+  ====================================================== -->
+
+  <section class="story-intro" aria-labelledby="story-title">
+
+    <div class="section-heading centered">
+
+      <p class="eyebrow">somewhere along the way</p>
+
+      <h2 id="story-title">
+        We found each other differently.
+      </h2>
+
+      <p class="story-copy">
+        Different places. Different times.
+        <br />
+        Different parts of life.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       MEMORIES
+       We will replace these placeholders with your photos.
+  ====================================================== -->
+
+  <section
+    class="memories"
+    aria-label="A few memories along the way"
+  >
+
+    <p class="memory-line">
+      some memories were shared.
+    </p>
+
+
+    <div class="memory-grid">
+
+      <!-- MEMORY 1 -->
+      <article class="memory-card tilt-left">
+
+        <div class="memory-placeholder">
+          <span>your memory</span>
+          <small>photo coming soon</small>
         </div>
-        <img class="hero-photo" src="assets/mariah-hewines-bouquet-cutout.png" alt="A bouquet of purple, pink, and green flowers" />
-        <p class="swipe-note">scroll down<br /><span>to reply</span><b>⌄</b></p>
-      </section>
 
-      <section class="invitation" aria-labelledby="details-title">
-        <div class="section-heading">
-          <p class="eyebrow">the little details</p>
-          <h2 id="details-title">A slow meal, together</h2>
-        </div>
-        <div class="details-grid">
-          <article>
-            <span class="detail-icon">⌁</span>
-            <p class="detail-label">When</p>
-            <p class="detail-value">Saturday, 24 October<br /><span>Dinner · 9:00 pm</span></p>
-          </article>
-          <article>
-            <span class="detail-icon">⌂</span>
-            <p class="detail-label">Where</p>
-            <p class="detail-value">To be decided<br /><span>somewhere lovely &amp; easy</span></p>
-          </article>
-          <article>
-            <span class="detail-icon">✽</span>
-            <p class="detail-label">Dress note</p>
-            <p class="detail-value">To be Confirmed <br /><span>or simply come as you are</span></p>
-          </article>
-        </div>
-      </section>
+      </article>
 
-      <section class="rsvp-section" aria-labelledby="rsvp-title">
-        <div class="section-heading centered">
-          <p class="eyebrow">your seat at the table</p>
-          <h2 id="rsvp-title">Help us choose the perfect plan</h2>
-          <p class="intro">Nothing set in stone yet — tell us what would make this feel good for you.</p>
+
+      <!-- MEMORY 2 -->
+      <article class="memory-card small-card tilt-right">
+
+        <div class="memory-placeholder">
+          <span>a little moment</span>
+          <small>photo coming soon</small>
         </div>
 
-        <form id="rsvp-form">
-          <div class="form-block identity-block">
-            <label for="name">Your name <span aria-hidden="true">*</span></label>
-            <input id="name" name="name" type="text" placeholder="What should we call you?" required />
-          </div>
-
-          <fieldset class="form-block">
-            <legend>Will you be joining us? <span aria-hidden="true">*</span></legend>
-            <div class="choice-row two-up">
-              <label class="choice-card"><input type="radio" name="attendance" value="Absolutely" required /><span>Yes, save me a seat <b>♡</b></span></label>
-              <label class="choice-card"><input type="radio" name="attendance" value="Not this time" /><span>I’ll miss this one <b>↗</b></span></label>
-            </div>
-          </fieldset>
+      </article>
 
 
-         <fieldset class="form-block">
-  <legend>Where would you love to eat?</legend>
-  <div class="choice-list"> 
+      <!-- MEMORY 3 -->
+      <article class="memory-card tall-card tilt-right">
 
-    <label class="choice-card">
-      <input type="radio" name="venue" value=" Shah Alam area " />
-      <span>
-        <strong>Shah Alam area</strong>
-        <small>Garden café · light, cosy &amp; chatty</small>
-      </span>
-      <i>○</i>
-    </label>
+        <div class="memory-placeholder">
+          <span>somewhere in between</span>
+          <small>photo coming soon</small>
+        </div>
 
-    <label class="choice-card">
-      <input type="radio" name="venue" value=" Kuala Lumpur area " />
-      <span>
-        <strong>Kuala Lumpur area</strong>
-        <small>Modern Asian · bright &amp; shareable</small>
-      </span>
-      <i>○</i>
-    </label>
+      </article>
 
-    <label class="choice-card">
-      <input type="radio" name="venue" value=" Putrajaya area " />
-      <span>
-        <strong>Putrajaya area</strong>
-        <small>Japanese plates · calm &amp; intimate</small>
-      </span>
-      <i>○</i>
-    </label>
 
+      <!-- MEMORY 4 -->
+      <article class="memory-card small-card tilt-left">
+
+        <div class="memory-placeholder">
+          <span>one for the archives</span>
+          <small>photo coming soon</small>
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <p class="memory-line second">
+      some happened separately.
+    </p>
+
+
+    <p class="frame-thought">
+
+      and somehow,
+
+      <br />
+
+      <strong>
+        we were rarely all in the same frame.
+      </strong>
+
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       THE PHOTO THAT DOESN'T EXIST YET
+  ====================================================== -->
+
+  <section
+    class="missing-photo"
+    aria-labelledby="missing-title"
+  >
+
+    <div class="empty-polaroid">
+
+      <div class="empty-frame">
+
+        <span>
+          NO PHOTO YET
+        </span>
+
+      </div>
+
+
+      <div class="polaroid-caption">
+
+        <h2 id="missing-title">
+          we haven't taken this one.
+        </h2>
+
+        <p>
+          24.10.26
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <p class="change-line">
+      so maybe it's time we did.
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       DINNER DETAILS
+  ====================================================== -->
+
+  <section
+    class="invitation"
+    aria-labelledby="details-title"
+  >
+
+    <div class="section-heading centered">
+
+      <p class="eyebrow">
+        one table, all of us
+      </p>
+
+      <h2 id="details-title">
+        Dinner is waiting.
+      </h2>
+
+      <p class="intro">
+        No planning needed on your side.
+        Just come, eat, stay awhile,
+        and let me take care of the rest.
+      </p>
+
+    </div>
+
+
+    <div class="details-grid">
+
+
+      <!-- DATE -->
+
+      <article>
+
+        <span class="detail-icon">
+          ⌁
+        </span>
+
+        <p class="detail-label">
+          When
+        </p>
+
+        <p class="detail-value">
+
+          Saturday, 24 October
+
+          <br />
+
+          <span>
+            Dinner · 9:00 pm
+          </span>
+
+        </p>
+
+      </article>
+
+
+      <!-- RESTAURANT -->
+
+      <article>
+
+        <span class="detail-icon">
+          ⌂
+        </span>
+
+        <p class="detail-label">
+          Where
+        </p>
+
+        <p class="detail-value">
+
+          A lovely table in KL
+
+          <br />
+
+          <span>
+            restaurant reveal coming soon
+          </span>
+
+        </p>
+
+      </article>
+
+
+      <!-- DRESS -->
+
+      <article>
+
+        <span class="detail-icon">
+          ✽
+        </span>
+
+        <p class="detail-label">
+          Dress note
+        </p>
+
+        <p class="detail-value">
+
+          To be confirmed
+
+          <br />
+
+          <span>
+            something you feel good in
+          </span>
+
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       RSVP
+  ====================================================== -->
+
+  <section
+    class="rsvp-section"
+    aria-labelledby="rsvp-title"
+  >
+
+    <div class="section-heading centered">
+
+      <p class="eyebrow">
+        your seat at the table
+      </p>
+
+      <h2 id="rsvp-title">
+        Will I see you there?
+      </h2>
+
+      <p class="intro">
+        Kindly reply by
+        <strong>10 · 10 · 26</strong>.
+      </p>
+
+    </div>
+
+
+    <form id="rsvp-form">
+
+
+      <!-- NAME -->
+
+      <div class="form-block identity-block">
+
+        <label for="name">
+
+          Your name
+
+          <span aria-hidden="true">*</span>
+
+        </label>
+
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="What should I call you?"
+          required
+        />
+
+      </div>
+
+
+      <!-- ATTENDANCE -->
+
+      <fieldset class="form-block">
+
+        <legend>
+
+          Will you be joining me?
+
+          <span aria-hidden="true">*</span>
+
+        </legend>
+
+
+        <div class="choice-row two-up">
+
+
+          <label class="choice-card">
+
+            <input
+              type="radio"
+              name="attendance"
+              value="Absolutely"
+              required
+            />
+
+            <span>
+
+              Yes, save me a seat
+
+              <b>♡</b>
+
+            </span>
+
+          </label>
+
+
+          <label class="choice-card">
+
+            <input
+              type="radio"
+              name="attendance"
+              value="Not this time"
+            />
+
+            <span>
+
+              I can't make this one
+
+              <b>↗</b>
+
+            </span>
+
+          </label>
+
+
+        </div>
+
+      </fieldset>
+
+
+      <!-- FOOD -->
+
+      <div class="form-block">
+
+        <label for="avoid">
+          Anything I should avoid?
+        </label>
+
+        <textarea
+          id="avoid"
+          name="avoid"
+          rows="3"
+          placeholder="Allergies, dislikes, dietary needs…"
+        ></textarea>
+
+      </div>
+
+
+      <!-- TRANSPORT + NOTE -->
+
+      <fieldset class="form-block">
+
+        <legend>
+          A little practical thing
+        </legend>
+
+
+        <div class="mini-options single-option">
+
+          <label>
+
+            <span>
+              Getting there
+            </span>
+
+            <select name="travel">
+
+              <option value="">
+                Choose one
+              </option>
+
+              <option>
+                Driving
+              </option>
+
+              <option>
+                Public transport
+              </option>
+
+              <option>
+                Need a lift
+              </option>
+
+              <option>
+                Not sure yet
+              </option>
+
+            </select>
+
+          </label>
+
+        </div>
+
+
+        <label
+          class="notes-label"
+          for="notes"
+        >
+          Anything you want me to know?
+        </label>
+
+
+        <textarea
+          id="notes"
+          name="notes"
+          rows="3"
+          placeholder="A timing note, a question, or just say hi…"
+        ></textarea>
+
+
+      </fieldset>
+
+
+      <!-- SUBMIT -->
+
+      <button
+        class="submit"
+        type="submit"
+      >
+
+        Send my little note
+
+        <span>→</span>
+
+      </button>
+
+
+      <p class="privacy-note">
+        That's all. I'll take care of the rest ♡
+      </p>
+
+
+      <p
+        id="confirmation"
+        class="confirmation"
+        role="status"
+        aria-live="polite"
+      ></p>
+
+
+    </form>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+    <span>
+      made with anticipation
+    </span>
+
+    <span class="footer-flower">
+      ✽
+    </span>
+
+    <span>
+      see you around the table
+    </span>
+
+  </footer>
+
+
+</main>
+
+
+<!-- =====================================================
+     OPENING INVITATION
+====================================================== -->
+
+<dialog
+  class="welcome-modal"
+  id="welcome-modal"
+  aria-labelledby="welcome-title"
+>
+
+  <div
+    class="modal-flower"
+    aria-hidden="true"
+  >
+    ✿
   </div>
-</fieldset>
 
-          <div class="form-block split-fields">
-            <div>
-              <label for="favourites">Food you’re hoping for</label>
-              <textarea id="favourites" name="favourites" rows="3" placeholder="Anything you’ve been craving?"></textarea>
-            </div>
-            <div>
-              <label for="avoid">Food to avoid</label>
-              <textarea id="avoid" name="avoid" rows="3" placeholder="Allergies, dislikes, dietary needs…"></textarea>
-            </div>
-          </div>
 
-          <fieldset class="form-block">
-            <legend>One more thing for the host</legend>
-            <div class="mini-options">
-              <label><span>Comfortable spend</span><select name="budget"><option value="">Choose one</option><option>Under RM20</option><option>RM20–50</option><option>>RM60</option><option>Happy to splurge</option></select></label>
-              <label><span>Getting there</span><select name="travel"><option value="">Choose one</option><option>Driving</option><option>Public transport</option><option>Need a lift</option><option>Not sure yet</option></select></label>
-            </div>
-            <label class="notes-label" for="notes">Anything else we should know?</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Accessibility needs, timing notes, a birthday wish, or just say hi…"></textarea>
-          </fieldset>
+  <p class="eyebrow">
+    a little something for you
+  </p>
 
-          <button class="submit" type="submit">Send my little note <span>→</span></button>
-          <p class="privacy-note">Your answers are only for the host to plan the nicest table.</p>
-          <p id="confirmation" class="confirmation" role="status" aria-live="polite"></p>
-        </form>
-      </section>
 
-      <footer>
-        <span>made with anticipation</span><span class="footer-flower">✽</span><span>see you around the table</span>
-      </footer>
-    </main>
-    <dialog class="welcome-modal" id="welcome-modal" aria-labelledby="welcome-title">
-      <div class="modal-flower" aria-hidden="true">✿</div>
-      <p class="eyebrow">a little note for you</p>
-      <h2 id="welcome-title">You’re invited</h2>
-      <p>For a gathering filled with good food, easy conversation, and our favourite people. Let’s hope to meet soon.</p>
-      <button id="welcome-close" type="button">Open the invitation <span>→</span></button>
-    </dialog>
-    <!-- Add your deployed Google Apps Script URL in rsvp-config.js. -->
-    <script src="rsvp-config.js"></script>
-    <script src="script.js"></script>
-  </body>
+  <h2 id="welcome-title">
+    You're invited.
+  </h2>
+
+
+  <p>
+    Keep an evening for me.
+    There's somewhere I'd like us to be.
+  </p>
+
+
+  <button
+    id="welcome-close"
+    type="button"
+  >
+
+    Open the invitation
+
+    <span>→</span>
+
+  </button>
+
+
+</dialog>
+
+
+<script src="rsvp-config.js"></script>
+<script src="script.js"></script>
+
+</body>
 </html>
