@@ -7,6 +7,15 @@ const welcomeModal =
 const welcomeClose =
   document.querySelector('#welcome-close');
 
+const thankYouScreen =
+  document.querySelector('#thank-you-screen');
+
+const thankYouName =
+  document.querySelector('#thank-you-name');
+
+const thankYouReturn =
+  document.querySelector('#thank-you-return');
+
 
 /* =====================================================
    OPENING INVITATION
@@ -24,6 +33,38 @@ welcomeClose?.addEventListener(
   'click',
   () => {
     welcomeModal.close();
+  }
+);
+
+
+function showThankYou(name) {
+
+  thankYouName.textContent =
+    name
+      ? `${name}, your reply has been received.`
+      : 'Your reply has been received.';
+
+  thankYouScreen.hidden = false;
+
+  document.body.classList.add('thank-you-active');
+
+  window.scrollTo(0, 0);
+
+  thankYouReturn.focus();
+
+}
+
+
+thankYouReturn?.addEventListener(
+  'click',
+  () => {
+
+    thankYouScreen.hidden = true;
+
+    document.body.classList.remove('thank-you-active');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
   }
 );
 
@@ -106,13 +147,12 @@ form.addEventListener(
 
       form.reset();
 
+      submitButton.disabled = false;
 
-      confirmation.textContent =
-        `Thank you, ${response.name}. Your seat is noted ♡`;
+      submitButton.innerHTML =
+        'Send my little note <span>→</span>';
 
-
-      submitButton.textContent =
-        'Note sent — thank you ♡';
+      showThankYou(response.name);
 
 
     }
