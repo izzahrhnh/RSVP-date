@@ -37,12 +37,10 @@ welcomeClose?.addEventListener(
 );
 
 
-function showThankYou(name) {
+function showThankYou() {
 
   thankYouName.textContent =
-    name
-      ? `${name}, your reply has been received.`
-      : 'Your reply has been received.';
+    'Your reply has been received.';
 
   thankYouScreen.hidden = false;
 
@@ -152,7 +150,7 @@ form.addEventListener(
       submitButton.innerHTML =
         'Send my little note <span>→</span>';
 
-      showThankYou(response.name);
+      showThankYou();
 
 
     }

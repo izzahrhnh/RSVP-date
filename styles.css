@@ -265,6 +265,10 @@ h1 {
     0 5px 35px rgba(0, 0, 0, 0.25);
 }
 
+h1 span {
+  display: block;
+}
+
 .hero-date {
   margin: 30px 0 0;
 
@@ -635,6 +639,17 @@ h1 {
   background: var(--ivory-soft);
 
   box-shadow: var(--shadow);
+
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 450ms ease;
+}
+
+.memory-photo:hover {
+  z-index: 4;
+
+  box-shadow: 0 24px 42px rgba(0, 0, 0, 0.28);
+
+  transform: rotate(var(--tilt)) translateY(-10px) scale(1.025);
 }
 
 .memory-photo > p {
@@ -663,86 +678,111 @@ h1 {
 }
 
 .photo-one {
-  transform: rotate(-3deg);
+  --tilt: -3deg;
+
+  transform: rotate(var(--tilt));
 }
 
 .photo-two {
-  width: 78%;
+  --tilt: 3.5deg;
+
+  width: 86%;
 
   justify-self: center;
 
-  transform: rotate(3.5deg);
+  transform: rotate(var(--tilt));
+}
+
+.photo-two .memory-image {
+  aspect-ratio: 2 / 3;
 }
 
 .photo-three {
+  --tilt: 2.5deg;
+
   width: 82%;
 
   justify-self: center;
 
-  transform: rotate(2.5deg);
+  transform: rotate(var(--tilt));
 }
 
 .photo-four {
-  transform: rotate(-2.5deg);
+  --tilt: -2.5deg;
+
+  transform: rotate(var(--tilt));
 }
 
-.photo-three .photo-placeholder {
+.photo-five {
+  --tilt: 1.5deg;
+
+  grid-column: 1 / -1;
+
+  width: 47%;
+
+  justify-self: center;
+
+  transform: rotate(var(--tilt));
+}
+
+.photo-three .memory-image {
   aspect-ratio: 4 / 5;
 }
 
-.photo-placeholder {
-  display: flex;
+.memory-image {
+  position: relative;
+
+  overflow: hidden;
 
   aspect-ratio: 4 / 3;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 20px;
-
-  background:
-    radial-gradient(
-      circle at 50% 30%,
-      rgba(113, 25, 45, 0.65),
-      transparent 50%
-    ),
-    linear-gradient(
-      145deg,
-      #38432a,
-      #1d291f
-    );
-
-  color: var(--ivory);
-
-  text-align: center;
 }
 
-.photo-placeholder span {
-  font-family:
-    Fraunces,
-    Georgia,
-    serif;
+.memory-image img {
+  display: block;
 
-  font-size: 20px;
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  animation: memory-drift 9s ease-in-out infinite alternate;
 }
 
-.photo-placeholder small {
-  margin-top: 7px;
+.photo-two .memory-image img,
+.photo-three .memory-image img,
+.photo-five .memory-image img {
+  animation-delay: -3s;
+}
 
-  color: var(--muted-light);
+.photo-four .memory-image {
+  aspect-ratio: 5 / 4;
+}
 
-  font-family:
-    "DM Mono",
-    monospace;
+.photo-four .memory-image img {
+  animation-delay: -5s;
+}
 
-  font-size: 7px;
+.photo-five .memory-image {
+  aspect-ratio: 16 / 10;
+}
 
-  letter-spacing: 0.15em;
+@keyframes memory-drift {
+  from {
+    transform: scale(1.02) translate3d(-0.6%, -0.4%, 0);
+  }
 
-  text-transform: uppercase;
+  to {
+    transform: scale(1.1) translate3d(0.6%, 0.5%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .memory-photo,
+  .memory-image img {
+    transition: none;
+    animation: none;
+  }
 }
 
 .pressed-flower {
@@ -1339,10 +1379,6 @@ form {
     1px solid rgba(242, 234, 223, 0.13);
 }
 
-.name-block {
-  max-width: 410px;
-}
-
 label,
 legend {
   display: block;
@@ -1362,7 +1398,6 @@ legend span {
   color: var(--rose);
 }
 
-input[type="text"],
 textarea,
 select {
   width: 100%;
@@ -1393,7 +1428,6 @@ select {
     border-color 0.2s ease;
 }
 
-input[type="text"]:focus,
 textarea:focus,
 select:focus {
   border-color: var(--rose);
@@ -1521,26 +1555,6 @@ legend {
   font-size: 16px;
 }
 
-
-/* ==========================================================
-   RSVP TRANSPORT / NOTES
-========================================================== */
-
-.travel-field {
-  max-width: 330px;
-
-  margin: 17px 0 28px;
-}
-
-.travel-field label {
-  color: var(--muted-light);
-
-  font-family:
-    Manrope,
-    sans-serif;
-
-  font-size: 11px;
-}
 
 .notes-label {
   font-size: 17px;
@@ -1962,7 +1976,8 @@ footer b {
 
   .memory-photo,
   .photo-two,
-  .photo-three {
+  .photo-three,
+  .photo-five {
     width: 88%;
   }
 
@@ -1974,6 +1989,12 @@ footer b {
   .photo-two,
   .photo-four {
     justify-self: end;
+  }
+
+  .photo-five {
+    grid-column: auto;
+
+    justify-self: center;
   }
 
   .pressed-flower {
